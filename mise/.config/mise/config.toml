@@ -1,5 +1,4 @@
 [tools]
-"cargo:tinty" = "latest"
 node = "20.19"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@byterover/cipher" = "latest"

@@ -1,0 +1,13 @@
+[tools]
+"cargo:tinty" = "latest"
+node = "20.19"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@byterover/cipher" = "latest"
+"npm:yarn" = "latest"
+ruby = "latest"
+rust = "latest"
+uv = "latest"
+yarn = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = []

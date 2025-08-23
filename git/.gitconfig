@@ -1,0 +1,7 @@
+[ghq]
+	root = ~/Workspace
+[user]
+	name = Yuta Takahashi
+	email = yuta.takahashi.2508@onecareer.jp
+[alias]
+	co-fzf = !git branch | fzf | xargs git checkout

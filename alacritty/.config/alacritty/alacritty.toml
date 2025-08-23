@@ -1,0 +1,18 @@
+[terminal.shell]
+program = "/bin/zsh"
+args = ['--login']
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "MesloLGS NF"
+
+[window]
+decorations = "full"
+padding = { x = 8, y = 8 }
+
+[general]
+import = ["~/.config/alacritty/themes/themes/gruber_darker.toml"]
+
+[terminal]

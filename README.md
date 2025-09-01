@@ -10,6 +10,7 @@ GNU Stowを使った個人開発環境設定ファイル管理
 - **ghostty** - Ghostty端末設定
 - **tmux** - tmux設定 (新形式: ~/.config/tmux/)
 - **mise** - 多言語ランタイムマネージャー設定
+- **tinted-theming** - Tintyテーママネージャー設定 (base16/base24テーマ)
 
 ### パッケージ管理
 - **homebrew** - Brewfileによるパッケージ管理
@@ -40,7 +41,7 @@ cd ~/dotfiles
 #### 設定ファイルのみ (Stow)
 ```bash
 cd ~/dotfiles
-stow zsh git tmux ghostty mise
+stow zsh git tmux ghostty mise tinted-theming
 ```
 
 ## 📦 Brewfile管理

@@ -36,6 +36,7 @@ STOW_DIRS=(
     "tmux"
     "mise"
     "ghostty"
+    "tinted-theming"
 )
 
 for dir in "${STOW_DIRS[@]}"; do

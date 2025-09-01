@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Homebrew Setup Script
+# This script installs Homebrew and packages from Brewfile
+
+set -e
+
+echo "==================================="
+echo "   Homebrew Setup Script"
+echo "==================================="
+
+# Check if Homebrew is installed
+if ! command -v brew &> /dev/null; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    
+    # Add Homebrew to PATH for Apple Silicon Macs
+    if [[ $(uname -m) == "arm64" ]]; then
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
+else
+    echo "✓ Homebrew is already installed"
+fi
+
+# Update Homebrew
+echo "Updating Homebrew..."
+brew update
+
+# Install packages from Brewfile
+BREWFILE_PATH="$(dirname "$(dirname "$(dirname "$0")")")/homebrew/Brewfile"
+
+if [ -f "$BREWFILE_PATH" ]; then
+    echo "Installing packages from Brewfile..."
+    brew bundle install --file="$BREWFILE_PATH"
+    echo "✓ All packages installed successfully"
+else
+    echo "Error: Brewfile not found at $BREWFILE_PATH"
+    exit 1
+fi
+
+echo ""
+echo "==================================="
+echo "   Homebrew setup complete!"
+echo "==================================="

@@ -1,0 +1,81 @@
+# Homebrew Brewfile - Package management for macOS
+# Generated from current system configuration
+
+# ====================
+# Taps (Additional repositories)
+# ====================
+tap "tinted-theming/tinted"
+
+# ====================
+# Development Tools
+# ====================
+# Version control
+brew "git"                      # Distributed revision control system
+brew "gh"                       # GitHub command-line tool
+brew "ghq"                      # Remote repository management made easy
+
+# Editors and IDEs
+brew "neovim"                   # Ambitious Vim-fork focused on extensibility and agility
+
+# Runtime managers
+brew "mise"                     # Polyglot runtime manager (asdf rust clone)
+
+# Development utilities
+brew "pre-commit"               # Framework for managing multi-language pre-commit hooks
+brew "libpq"                    # Postgres C API library
+
+# ====================
+# Container & Virtualization
+# ====================
+brew "colima"                   # Container runtimes on MacOS (and Linux) with minimal setup
+brew "docker"                   # Pack, ship and run any application as a lightweight container
+brew "docker-buildx"            # Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-compose"           # Isolated development environments using Docker
+
+# ====================
+# Terminal & Shell Tools
+# ====================
+brew "tmux"                     # Terminal multiplexer
+brew "fzf"                      # Command-line fuzzy finder written in Go
+brew "starship"                 # Cross-shell prompt for astronauts
+brew "zplug"                    # Next-generation plugin manager for zsh
+brew "terminal-notifier"        # Send macOS User Notifications from the command-line
+brew "tinted-theming/tinted/tinty"  # Change the theme of your terminal, text editor and anything else
+
+# ====================
+# System Utilities
+# ====================
+brew "stow"                     # Organize software neatly under a single directory tree
+brew "gnupg"                    # GNU Pretty Good Privacy (PGP) package
+
+# ====================
+# Programming Languages
+# ====================
+brew "ruby"                     # Powerful, clean, object-oriented scripting language
+
+# ====================
+# GUI Applications (Casks)
+# ====================
+# Terminals
+cask "ghostty"                  # Terminal emulator that uses platform-native UI and GPU acceleration
+
+# Fonts
+cask "font-jetbrains-mono-nerd-font"  # JetBrains Mono Nerd Font
+
+# Development tools
+cask "jetbrains-toolbox"        # JetBrains tools manager
+
+# Productivity
+cask "notion"                   # App to write, plan, collaborate, and get organised
+cask "notion-calendar"          # Calendar for professionals and teams
+cask "obsidian"                 # Knowledge base that works on top of a local folder of plain text Markdown files
+cask "raycast"                  # Control your tools with a few keystrokes
+
+# Communication
+cask "slack"                    # Team communication and collaboration software
+
+# Design
+cask "figma"                    # Collaborative team software
+
+# Input methods
+cask "google-japanese-ime"      # Japanese input software

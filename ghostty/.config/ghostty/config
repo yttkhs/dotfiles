@@ -1,0 +1,23 @@
+shell-integration = zsh
+
+theme = "tinted-theming"
+
+font-size = 14
+font-thicken
+font-family = "JetBrainsMono Nerd Font"
+font-family = "PlemolJP"
+font-feature = -dlig
+
+alpha-blending = linear
+
+macos-icon = "xray"
+macos-titlebar-style = tabs
+macos-option-as-alt = true 
+macos-window-shadow = false
+
+window-save-state = always
+window-decoration = true
+
+mouse-hide-while-typing = true
+
+resize-overlay = never

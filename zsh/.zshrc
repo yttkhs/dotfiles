@@ -5,9 +5,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Oh My Zsh tmux plugin configuration
-export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOSTART_ONCE=false
-export ZSH_TMUX_AUTOCONNECT=false
+export ZSH_TMUX_AUTOCONNECT=true
 export ZSH_TMUX_AUTOQUIT=false
 export ZSH_TMUX_FIXTERM=true
 
@@ -41,3 +41,6 @@ fi
 
 # fzf + ghq alias setting
 alias cdghq='cd $(ghq root)/$(ghq list | fzf --preview "ls -la $(ghq root)/{}")'
+
+# Starship
+eval "$(starship init zsh)"

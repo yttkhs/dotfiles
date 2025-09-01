@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# Dotfiles Setup Script
+# Complete setup for all dotfiles and packages
+
+set -e
+
+echo "==================================="
+echo "   Dotfiles Complete Setup"
+echo "==================================="
+
+DOTFILES_DIR="$(dirname "$(dirname "$(dirname "$0")")")"
+cd "$DOTFILES_DIR"
+
+# 1. Install Homebrew and packages
+echo ""
+echo "Step 1: Setting up Homebrew..."
+"$DOTFILES_DIR/scripts/bin/setup-homebrew"
+
+# 2. Install GNU Stow if not installed
+if ! command -v stow &> /dev/null; then
+    echo ""
+    echo "Installing GNU Stow..."
+    brew install stow
+fi
+
+# 3. Apply dotfiles with Stow
+echo ""
+echo "Step 2: Applying dotfiles with Stow..."
+echo "Creating symlinks for configuration files..."
+
+# List of directories to stow
+STOW_DIRS=(
+    "zsh"
+    "git"
+    "tmux"
+    "mise"
+    "ghostty"
+)
+
+for dir in "${STOW_DIRS[@]}"; do
+    if [ -d "$dir" ]; then
+        echo "  - Stowing $dir..."
+        stow --adopt "$dir" 2>/dev/null || stow "$dir"
+    fi
+done
+
+echo "✓ All dotfiles linked successfully"
+
+# 4. Install tmux plugins
+if command -v tmux &> /dev/null; then
+    echo ""
+    echo "Step 3: Installing tmux plugins..."
+    if [ -f ~/.config/tmux/plugins/tpm/bin/install_plugins ]; then
+        ~/.config/tmux/plugins/tpm/bin/install_plugins
+        echo "✓ tmux plugins installed"
+    else
+        echo "  Note: TPM not found. Install it manually or run tmux and press prefix + I"
+    fi
+fi
+
+echo ""
+echo "==================================="
+echo "   Setup Complete!"
+echo "==================================="
+echo ""
+echo "Next steps:"
+echo "1. Restart your terminal"
+echo "2. Run 'mise install' to install runtime versions"
+echo "3. Configure any personal settings as needed"

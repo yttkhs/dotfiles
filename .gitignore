@@ -1,0 +1,196 @@
+# ========================================
+# Dotfiles Project .gitignore
+# ========================================
+
+# ========================================
+# macOS System Files
+# ========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ========================================
+# IDE and Editor Files
+# ========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# Vim
+*.swp
+*.swo
+*.swn
+.*.sw?
+*~
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ========================================
+# Homebrew
+# ========================================
+# Brewfile.lock.json is useful for tracking exact versions
+# but can be regenerated, so it's optional to track
+homebrew/Brewfile.lock.json
+
+# ========================================
+# Runtime and Package Managers
+# ========================================
+# mise (formerly rtx)
+.mise.local.toml
+.rtx.local.toml
+
+# asdf
+.tool-versions.local
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Ruby
+*.gem
+.bundle/
+vendor/bundle
+
+# ========================================
+# Sensitive Information
+# ========================================
+# SSH keys (should never be in dotfiles)
+**/ssh/id_*
+**/ssh/*_rsa
+**/ssh/*_dsa
+**/ssh/*_ecdsa
+**/ssh/*_ed25519
+**/ssh/known_hosts
+
+# GPG keys
+**/gnupg/private-keys-*.d/
+**/gnupg/pubring.kbx~
+**/gnupg/secring.gpg
+
+# Environment files with secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# API keys and tokens
+*_token
+*_secret
+*.key
+*.pem
+
+# ========================================
+# Temporary and Cache Files
+# ========================================
+*.log
+*.cache
+*.tmp
+.temp/
+tmp/
+cache/
+
+# ========================================
+# Backup Files
+# ========================================
+*.bak
+*.backup
+*.orig
+*.old
+
+# ========================================
+# tmux Plugin Manager (TPM)
+# ========================================
+# TPM plugins are cloned git repositories
+tmux/.config/tmux/plugins/
+
+# Tmux resurrect sessions
+tmux/.config/tmux/resurrect/
+
+# ========================================
+# Zsh
+# ========================================
+# Zsh compiled files
+*.zwc
+.zcompdump*
+.zsh_history
+.zsh_sessions/
+
+# Zplug
+zsh/.zplug/repos/
+zsh/.zplug/cache/
+zsh/.zplug/log/
+
+# ========================================
+# Project Specific
+# ========================================
+# Test files
+test/
+tests/
+*.test
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# Archive files
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# ========================================
+# Optional: Tracked but user-specific
+# ========================================
+# Some users might want to track these
+# Uncomment if you don't want to track them
+# git/.gitconfig.local
+# zsh/.zshrc.local

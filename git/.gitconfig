@@ -5,3 +5,5 @@
 	email = yuta.takahashi.2508@onecareer.jp
 [alias]
 	co-fzf = !git branch | fzf | xargs git checkout
+[url "git@github.com:"]
+	insteadOf = https://github.com/

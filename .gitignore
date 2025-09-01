@@ -120,6 +120,7 @@ vendor/bundle
 .env.local
 .env.*.local
 *.env
+.envrc
 
 # API keys and tokens
 *_token

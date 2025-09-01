@@ -1,12 +1,14 @@
-[tools]
-node = "20.19"
-"npm:@anthropic-ai/claude-code" = "latest"
-"npm:@byterover/cipher" = "latest"
-"npm:yarn" = "latest"
-ruby = "latest"
-rust = "latest"
-uv = "latest"
-yarn = "latest"
-
 [settings]
 idiomatic_version_file_enable_tools = []
+
+[settings.node]
+gpg_verify = false
+
+[tools]
+gemini-cli = "latest"
+node = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:yarn" = "latest"
+python = "latest"
+uv = "latest"
+

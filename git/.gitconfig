@@ -1,9 +1,9 @@
 [ghq]
-	root = ~/Workspace
+	root = ~/Workspace/Repository
 [user]
 	name = Yuta Takahashi
-	email = yuta.takahashi.2508@onecareer.jp
+	email = penityai@gmail.com
 [alias]
-	co-fzf = !git branch | fzf | xargs git checkout
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+    co-fzf = !git branch | fzf | xargs git checkout
+[core]
+	autocrlf = input

@@ -3,7 +3,7 @@
 return {
   -- mini.notify: notification system (replaces snacks notifier)
   {
-    "echasnovski/mini.notify",
+    "nvim-mini/mini.notify",
     version = false,
     event = "VeryLazy",
     opts = {
@@ -20,7 +20,7 @@ return {
 
   -- mini.indentscope: animated indent scope (replaces snacks indent)
   {
-    "echasnovski/mini.indentscope",
+    "nvim-mini/mini.indentscope",
     version = false,
     event = { "BufReadPre", "BufNewFile" },
     opts = {
@@ -54,7 +54,7 @@ return {
 
   -- mini.tabline: buffer/tab line (replaces bufferline)
   {
-    "echasnovski/mini.tabline",
+    "nvim-mini/mini.tabline",
     version = false,
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -66,7 +66,7 @@ return {
 
   -- mini.hipatterns: highlight patterns like TODO/FIXME (replaces todo-comments)
   {
-    "echasnovski/mini.hipatterns",
+    "nvim-mini/mini.hipatterns",
     version = false,
     event = { "BufReadPre", "BufNewFile" },
     opts = function()
@@ -86,7 +86,7 @@ return {
 
   -- mini.clue: key binding helper (replaces which-key)
   {
-    "echasnovski/mini.clue",
+    "nvim-mini/mini.clue",
     version = false,
     event = "VeryLazy",
     opts = function()

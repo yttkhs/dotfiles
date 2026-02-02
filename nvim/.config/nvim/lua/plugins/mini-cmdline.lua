@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.cmdline",
+    "nvim-mini/mini.cmdline",
     version = false,
     event = "CmdlineEnter",
     opts = {},

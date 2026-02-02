@@ -4,7 +4,6 @@ theme = "tinted-theming"
 
 font-size = 14
 font-thicken
-font-family = "JetBrainsMono Nerd Font"
 font-family = "PlemolJP"
 font-feature = -dlig
 

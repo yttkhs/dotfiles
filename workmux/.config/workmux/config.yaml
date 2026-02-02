@@ -15,7 +15,7 @@ status_icons:
 panes:
   - command: clear    # 左側：空のシェル（60%）
   - command: <agent>  # 右側：Claude Code（40%）
-    split: vertical
+    split: horizontal
     percentage: 40
     focus: true
 

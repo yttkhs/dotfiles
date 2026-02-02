@@ -62,6 +62,9 @@ alias cdghq='cd $(ghq root)/$(ghq list | fzf --preview "ls -la $(ghq root)/{}")'
 # Atcoder Online Judge Tools Alias Setting
 alias ojt='oj t -c " cpp main.cpp" -d test'
 
+# Workmux
+alias wm='workmux'
+
 # Claude
 export PATH="$HOME/.claude/local:$PATH"
 
@@ -78,3 +81,6 @@ eval "$(starship init zsh)"
 
 # mise
 eval "$(mise activate zsh)"
+
+# Workmux completions
+eval "$(workmux completions zsh)"

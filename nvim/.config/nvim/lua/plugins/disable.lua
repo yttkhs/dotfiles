@@ -7,7 +7,7 @@ return {
       notifier = { enabled = false }, -- replaced by mini.notify
       indent = { enabled = false }, -- replaced by mini.indentscope
       picker = { enabled = true },
-      explorer = { enabled = true },
+      explorer = { enabled = false },
       git = { enabled = true },
       terminal = { enabled = true },
       bufdelete = { enabled = true },

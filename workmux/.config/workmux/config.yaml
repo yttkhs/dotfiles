@@ -1,0 +1,16 @@
+merge_strategy: merge
+worktree_naming: basename
+nerdfont: true
+agent: claude
+
+status_icons:
+  working: "󰚩"
+  waiting: "󰆄"
+  done: "󰄬"
+
+panes:
+  - command: clear    # 左側：空のシェル（60%）
+  - command: <agent>  # 右側：Claude Code（40%）
+    split: vertical
+    percentage: 40
+    focus: true

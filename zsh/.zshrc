@@ -1,6 +1,10 @@
 # PATH
 export "PATH=/usr/local/bin:$PATH"
 
+# Editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 # prezto  init setup
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 

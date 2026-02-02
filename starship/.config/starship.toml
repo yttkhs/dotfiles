@@ -1,0 +1,66 @@
+# Minimal Starship Config
+# Colors use ANSI names to follow terminal palette (controlled by tinty)
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+# Disable all language/tool modules
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[rust]
+disabled = true
+
+[golang]
+disabled = true
+
+[java]
+disabled = true
+
+[ruby]
+disabled = true
+
+[php]
+disabled = true
+
+[package]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+# Directory - uses terminal foreground
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold blue"
+
+# Git branch - uses terminal cyan
+[git_branch]
+format = "[$branch]($style) "
+style = "bold cyan"
+
+# Git status - uses terminal yellow
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold yellow"
+
+# Prompt character - uses terminal green/red
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

@@ -63,7 +63,6 @@ alias cdghq='cd $(ghq root)/$(ghq list | fzf --preview "ls -la $(ghq root)/{}")'
 alias ojt='oj t -c " cpp main.cpp" -d test'
 
 # Claude
-alias claude="/Users/yuta/.claude/local/claude"
 export PATH="$HOME/.claude/local:$PATH"
 
 # fzf shell integration (managed by Homebrew)

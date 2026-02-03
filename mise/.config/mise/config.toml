@@ -7,7 +7,6 @@ gpg_verify = false
 [tools]
 gemini-cli = "latest"
 node = "latest"
-"npm:@anthropic-ai/claude-code" = "latest"
 "npm:yarn" = "latest"
 python = "latest"
 uv = "latest"

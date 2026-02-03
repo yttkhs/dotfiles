@@ -22,5 +22,8 @@ mouse-hide-while-typing = true
 
 resize-overlay = never
 
+window-padding-x = 0
+window-padding-y = 0
+
 # workmux dashboard (sends tmux prefix + C-s)
 keybind = cmd+e=text:\x02\x13

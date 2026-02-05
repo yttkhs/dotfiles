@@ -8,6 +8,7 @@ gpg_verify = false
 gemini-cli = "latest"
 node = "latest"
 "npm:yarn" = "latest"
+"npm:@openai/codex" = "latest"
 python = "latest"
 uv = "latest"
 

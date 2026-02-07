@@ -37,12 +37,18 @@ STOW_DIRS=(
     "mise"
     "ghostty"
     "tinted-theming"
+    "nvim"
+    "neovide"
+    "sheldon"
+    "starship"
+    "workmux"
+    "claude"
 )
 
 for dir in "${STOW_DIRS[@]}"; do
     if [ -d "$dir" ]; then
         echo "  - Stowing $dir..."
-        stow --adopt "$dir" 2>/dev/null || stow "$dir"
+        stow -t "$HOME" --adopt "$dir" 2>/dev/null || stow -t "$HOME" "$dir"
     fi
 done
 

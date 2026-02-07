@@ -1,43 +1,43 @@
 # vim: ft=ghostty
-# Kanagawa Dragon theme for Ghostty
-# Scheme Author: Stefan Weigl-Bosker (https://github.com/sweiglbosker), Tommaso Laurenzi (https://github.com/rebelot/kanagawa.nvim)
+# Mountain theme for Ghostty
+# Scheme Author: Stefan Weigl-Bosker (https://github.com/sweiglbosker), based on Mountain Theme (https://github.com/mountain-theme/Mountain)
 # Scheme System: base24
 # Template Author: Tinted Terminal (https://github.com/tinted-theming/tinted-terminal)
 
 # Color palette
-palette = 0=#181616
-palette = 1=#c4746e
-palette = 2=#8a9a7b
-palette = 3=#c4b28a
-palette = 4=#8ba4b0
-palette = 5=#a292a3
-palette = 6=#8ea4a2
-palette = 7=#c5c9c5
-palette = 8=#625e5a
-palette = 9=#e46876
-palette = 10=#87a987
-palette = 11=#e6c384
-palette = 12=#7fb4ca
-palette = 13=#938aa9
-palette = 14=#7aa89f
-palette = 15=#c5c9c5
-palette = 16=#b6927b
-palette = 17=#b98d7b
-palette = 18=#282727
-palette = 19=#393836
-palette = 20=#737c73
-palette = 21=#c8c093
+palette = 0=#0f0f0f
+palette = 1=#ac8a8c
+palette = 2=#8aac8b
+palette = 3=#aca98a
+palette = 4=#8f8aac
+palette = 5=#ac8aac
+palette = 6=#8aabac
+palette = 7=#cacaca
+palette = 8=#393939
+palette = 9=#c49ea0
+palette = 10=#9ec49f
+palette = 11=#c4c19e
+palette = 12=#a39ec4
+palette = 13=#c49ec4
+palette = 14=#9ec3c4
+palette = 15=#f0f0f0
+palette = 16=#c6a679
+palette = 17=#ac8a8c
+palette = 18=#191919
+palette = 19=#262626
+palette = 20=#4c4c4c
+palette = 21=#e7e7e7
 
 # Foreground & background colors
-background = #181616
-foreground = #c5c9c5
-cursor-color = #c5c9c5
-selection-background = #c5c9c5
-selection-foreground = #393836
+background = #0f0f0f
+foreground = #cacaca
+cursor-color = #cacaca
+selection-background = #cacaca
+selection-foreground = #262626
 
 # Set `macos-icon = custom-style` in your main configuration file to enable theming of the app icon.
 #
 # Set the ghost color to the lightest foreground:
-macos-icon-ghost-color = #c5c9c5
+macos-icon-ghost-color = #f0f0f0
 # Replace the official icon's blue background with the designated bright blue color:
-macos-icon-screen-color = #7fb4ca
+macos-icon-screen-color = #a39ec4

@@ -7,12 +7,16 @@ font-thicken
 font-family = "PlemolJP35"
 font-feature = -dlig
 adjust-cell-height = 25%
+adjust-underline-thickness = 2
+adjust-underline-position = 4
 
+background-opacity = 0.9
 alpha-blending = linear
 
 macos-icon = "xray"
-macos-titlebar-style = tabs
-macos-option-as-alt = true 
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true
 macos-window-shadow = false
 
 window-save-state = always
@@ -24,6 +28,7 @@ resize-overlay = never
 
 window-padding-x = 0
 window-padding-y = 0
+window-padding-color = extend
 
 # workmux dashboard (sends tmux prefix + C-s)
 keybind = cmd+e=text:\x01\x13

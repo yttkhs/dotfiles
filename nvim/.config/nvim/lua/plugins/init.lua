@@ -79,7 +79,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     opts = {
-      scope = { char = "▎", show_start = true },
+      scope = { char = "▎", show_start = false },
     },
   },
 
@@ -226,6 +226,20 @@ return {
       { "<leader>qs", function() require("persistence").load() end, desc = "Restore session" },
       { "<leader>qd", function() require("persistence").stop() end, desc = "Stop session saving" },
     },
+  },
+
+  -- Highlight word under cursor
+  {
+    "RRethy/vim-illuminate",
+    event = { "BufReadPost", "BufNewFile" },
+    config = function()
+      require("illuminate").configure({
+        filetypes_denylist = { "dirbuf", "dirvish", "fugitive", "NvimTree", "nvdash" },
+      })
+      vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+      vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+      vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+    end,
   },
 
   -- Auto save

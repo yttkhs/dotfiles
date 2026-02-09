@@ -2,14 +2,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "mountain",
+  theme = "jellybeans",
   transparency = true,
-  hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
-    IblScopeChar = { fg = "light_grey" },
-    ["@ibl.scope.underline.1"] = { underline = true, sp = "light_grey" },
-  },
 }
 
 M.ui = {

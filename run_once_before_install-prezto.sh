@@ -1,30 +1,20 @@
 #!/bin/bash
 
-# Prezto Setup Script
-# Install and configure Prezto for zsh
-
 set -e
 
 echo "==================================="
 echo "   Prezto Setup"
 echo "==================================="
 
-# Install Prezto
-if [ ! -d ~/.zprezto ]; then
-    echo ""
+if [[ ! -d ~/.zprezto ]]; then
     echo "Installing Prezto..."
     git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
-    echo "✓ Prezto installed"
+    echo "Prezto installed"
 else
-    echo ""
     echo "Prezto already installed, updating..."
     cd ~/.zprezto
     git pull && git submodule sync --recursive && git submodule update --init --recursive
-    echo "✓ Prezto updated"
+    echo "Prezto updated"
 fi
 
-echo ""
-echo "✓ Prezto setup complete!"
-echo ""
-echo "Note: Your zsh configuration already includes Prezto initialization."
-echo "Restart your terminal to apply changes."
+echo "Prezto setup complete!"

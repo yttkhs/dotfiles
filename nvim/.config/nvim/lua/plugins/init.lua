@@ -242,9 +242,20 @@ return {
     end,
   },
 
+  -- Task runner
+  {
+    "stevearc/overseer.nvim",
+    cmd = { "OverseerRun", "OverseerToggle" },
+    opts = {},
+    keys = {
+      { "<leader>or", "<cmd>OverseerRun<CR>", desc = "Run task" },
+      { "<leader>ot", "<cmd>OverseerToggle<CR>", desc = "Toggle task list" },
+    },
+  },
+
   -- Auto save
   {
-    "okuuuu/auto-save.nvim",
+    "okuuva/auto-save.nvim",
     event = { "InsertLeave", "TextChanged" },
     opts = {},
   },

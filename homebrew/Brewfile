@@ -5,6 +5,7 @@
 # Taps (Additional repositories)
 # ====================
 tap "tinted-theming/tinted"
+tap "raine/workmux"
 
 # ====================
 # Development Tools
@@ -21,6 +22,7 @@ brew "neovim"                   # Ambitious Vim-fork focused on extensibility an
 brew "mise"                     # Polyglot runtime manager (asdf rust clone)
 
 # Development utilities
+brew "direnv"                   # Load/unload environment variables based on $PWD
 brew "pre-commit"               # Framework for managing multi-language pre-commit hooks
 brew "libpq"                    # Postgres C API library
 
@@ -38,15 +40,16 @@ brew "docker-compose"           # Isolated development environments using Docker
 brew "tmux"                     # Terminal multiplexer
 brew "fzf"                      # Command-line fuzzy finder written in Go
 brew "starship"                 # Cross-shell prompt for astronauts
-brew "zplug"                    # Next-generation plugin manager for zsh
+brew "sheldon"                  # Fast, configurable, shell plugin manager
 brew "terminal-notifier"        # Send macOS User Notifications from the command-line
 brew "tinted-theming/tinted/tinty"  # Change the theme of your terminal, text editor and anything else
 
 # ====================
 # System Utilities
 # ====================
-brew "stow"                     # Organize software neatly under a single directory tree
+brew "chezmoi"                  # Manage your dotfiles across multiple diverse machines
 brew "gnupg"                    # GNU Pretty Good Privacy (PGP) package
+brew "raine/workmux/workmux"    # Tmux workspace manager
 
 # ====================
 # Programming Languages

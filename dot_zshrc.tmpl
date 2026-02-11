@@ -1,0 +1,68 @@
+{{- $brewPrefix := "/opt/homebrew" -}}
+{{- if eq .chezmoi.arch "amd64" -}}
+{{-   $brewPrefix = "/usr/local" -}}
+{{- end -}}
+# PATH
+export PATH="/usr/local/bin:$PATH"
+
+# Editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# prezto  init setup
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+# Sheldon
+eval "$(sheldon source)"
+
+# Direnv
+eval "$(direnv hook zsh)"
+
+# Bun
+export PATH="{{ .chezmoi.homeDir }}/.bun/bin:$PATH"
+
+# Google Cloud SDK
+if [[ -f "{{ $brewPrefix }}/share/google-cloud-sdk/path.zsh.inc" ]]; then
+    source "{{ $brewPrefix }}/share/google-cloud-sdk/path.zsh.inc"
+    source "{{ $brewPrefix }}/share/google-cloud-sdk/completion.zsh.inc"
+fi
+
+# Node
+export NODE_OPTIONS="--max-old-space-size=4096"
+
+# libpq
+export PATH="{{ $brewPrefix }}/opt/libpq/bin:$PATH"
+
+# pipx
+export PATH="$PATH:{{ .chezmoi.homeDir }}/.local/bin"
+
+# fzf + ghq alias setting
+alias cdghq='cd $(ghq root)/$(ghq list | fzf --preview "ls -la $(ghq root)/{}")'
+
+# Atcoder Online Judge Tools Alias Setting
+alias ojt='oj t -c " cpp main.cpp" -d test'
+
+# Workmux
+alias wm='workmux'
+
+# Claude
+export PATH="$HOME/.claude/local:$PATH"
+
+# fzf shell integration (managed by Homebrew)
+if [[ -f ~/.fzf.zsh ]]; then
+    source ~/.fzf.zsh
+fi
+
+# Starship
+eval "$(starship init zsh)"
+
+# mise
+eval "$(mise activate zsh)"
+
+# Workmux completions
+eval "$(workmux completions zsh)"
+
+# Machine-specific overrides
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi

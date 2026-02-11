@@ -1,70 +1,76 @@
-# My Dotfiles (GNU Stow版)
+# dotfiles
 
-GNU Stowを使った個人開発環境設定ファイル管理
+[chezmoi](https://www.chezmoi.io/) で管理する個人開発環境の設定ファイル群。
 
-## 🏗️ 現在の構成
+## 管理ツール
 
-### 設定ファイル (Stow管理)
-- **zsh** - Zsh設定 (43行のシェル設定)
-- **git** - Git設定
-- **ghostty** - Ghostty端末設定
-- **tmux** - tmux設定 (新形式: ~/.config/tmux/)
-- **mise** - 多言語ランタイムマネージャー設定
-- **tinted-theming** - Tintyテーママネージャー設定 (base16/base24テーマ)
+| ツール | 用途 |
+|---|---|
+| chezmoi | dotfiles 管理 |
+| Homebrew | パッケージ管理 |
+| zsh + Prezto | シェル + フレームワーク |
+| sheldon | zsh プラグイン管理 |
+| Neovim (NvChad) | エディタ |
+| tmux + TPM | ターミナルマルチプレクサ |
+| Ghostty | ターミナルエミュレータ |
+| starship | プロンプト |
+| mise | ランタイムバージョン管理 |
+| tinty | ターミナルテーマ管理 (base16/base24) |
+| direnv | ディレクトリ別環境変数 |
+| workmux | ワークスペース管理 |
 
-### パッケージ管理
-- **homebrew** - Brewfileによるパッケージ管理
-  - 開発ツール (git, gh, neovim, docker等)
-  - GUIアプリケーション (Ghostty, JetBrains Toolbox, Notion等)
-  - フォント・ユーティリティ
+## クイックスタート
 
-## 🚀 クイックスタート
+### 新規マシン
 
-### 新環境でのセットアップ
 ```bash
-# リポジトリクローン
-git clone git@github.com:yttkhs/dotfiles.git ~/dotfiles
+# 1. chezmoi をインストール
+sh -c "$(curl -fsLS get.chezmoi.io)"
 
-# 完全自動セットアップ (Homebrew + Stow + 設定ファイル)
-cd ~/dotfiles
-./scripts/bin/setup-dotfiles
+# 2. クローン & 適用 (Homebrew, Prezto, TPM も自動セットアップ)
+chezmoi init --apply git@github.com:yttkhs/dotfiles.git
 ```
 
-### 個別セットアップ
+### 既存のリポジトリを使う場合
 
-#### Homebrewパッケージのみ
 ```bash
-cd ~/dotfiles
-./scripts/bin/setup-homebrew
+# ghq 等で既にクローン済みの場合、source として指定
+chezmoi init --source ~/Workspace/Repository/github.com/yttkhs/dotfiles --apply
 ```
 
-#### 設定ファイルのみ (Stow)
+## 日常的な使い方
+
 ```bash
-cd ~/dotfiles
-stow zsh git tmux ghostty mise tinted-theming
+# 設定ファイルを編集
+chezmoi edit ~/.zshrc
+
+# 変更内容をプレビュー
+chezmoi diff
+
+# 変更を適用
+chezmoi apply
+
+# ソースディレクトリで直接編集した場合
+chezmoi re-add
 ```
 
-## 📦 Brewfile管理
+## マシン固有の設定 (.local オーバーライド)
 
-### パッケージの追加
+マシン固有の設定は `.local` ファイルに記述する。これらはリポジトリに含まれない。
+
+- `~/.zshrc.local` - シェル設定のオーバーライド
+- `~/.gitconfig.local` - Git 設定のオーバーライド（仕事用メールアドレス等）
+
+## Brewfile 管理
+
+Brewfile を変更すると、次回の `chezmoi apply` で自動的に `brew bundle` が再実行される。
+
 ```bash
-# 新しいパッケージをインストール
+# 新しいパッケージを追加後、Brewfile を更新
 brew install <package>
-# または
-brew install --cask <app>
-
-# Brewfileを更新
-cd ~/dotfiles/homebrew
+cd "$(chezmoi source-path)/homebrew"
 brew bundle dump --force --describe
-```
 
-### 他環境への同期
-```bash
-cd ~/dotfiles/homebrew
-brew bundle
+# 変更を適用（brew bundle が自動実行される）
+chezmoi apply
 ```
-
-### 不要なパッケージの削除
-```bash
-cd ~/dotfiles/homebrew
-brew bundle cleanup

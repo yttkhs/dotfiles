@@ -4,6 +4,8 @@
 	name = Yuta Takahashi
 	email = penityai@gmail.com
 [alias]
-    co-fzf = !git branch | fzf | xargs git checkout
+	co-fzf = !git branch | fzf | xargs git checkout
 [core]
 	autocrlf = input
+[include]
+	path = ~/.gitconfig.local

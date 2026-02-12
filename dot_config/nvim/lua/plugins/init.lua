@@ -242,6 +242,24 @@ return {
     end,
   },
 
+  -- Improve vim.ui.select/input with telescope
+  {
+    "stevearc/dressing.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    opts = {
+      select = {
+        backend = { "telescope" },
+      },
+    },
+    init = function()
+      ---@diagnostic disable-next-line: duplicate-set-field
+      vim.ui.select = function(...)
+        require("lazy").load({ plugins = { "dressing.nvim" } })
+        return vim.ui.select(...)
+      end
+    end,
+  },
+
   -- Task runner
   {
     "stevearc/overseer.nvim",

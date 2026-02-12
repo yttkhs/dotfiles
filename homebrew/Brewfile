@@ -76,6 +76,7 @@ cask "raycast"                  # Control your tools with a few keystrokes
 
 # Communication
 cask "slack"                    # Team communication and collaboration software
+cask "telegram"                 # Cloud-based instant messaging service
 
 # Design
 cask "figma"                    # Collaborative team software

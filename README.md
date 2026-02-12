@@ -15,9 +15,36 @@
 | Ghostty | ターミナルエミュレータ |
 | starship | プロンプト |
 | mise | ランタイムバージョン管理 |
+| fzf | コマンドラインファジーファインダー (ghq 連携) |
 | tinty | ターミナルテーマ管理 (base16/base24) |
 | direnv | ディレクトリ別環境変数 |
 | workmux | ワークスペース管理 |
+| Claude Code | AI コーディングアシスタント |
+
+## リポジトリ構成
+
+```
+.
+├── dot_config/
+│   ├── ghostty/          # ターミナルエミュレータ
+│   ├── mise/             # ランタイムバージョン管理
+│   ├── nvim/             # Neovim (NvChad)
+│   ├── sheldon/          # zsh プラグイン管理
+│   ├── starship.toml     # プロンプト
+│   ├── tinted-theming/   # テーマ管理
+│   ├── tmux/             # tmux 設定
+│   └── workmux/          # ワークスペース管理
+├── dot_claude/           # Claude Code 設定
+├── homebrew/
+│   └── Brewfile          # Homebrew パッケージ一覧
+├── dot_gitconfig         # Git 設定
+├── dot_tmux.conf         # tmux エントリポイント
+├── dot_zpreztorc         # Prezto 設定
+├── dot_zshrc.tmpl        # zsh 設定 (chezmoi テンプレート)
+├── run_onchange_before_install-homebrew.sh.tmpl
+├── run_once_before_install-prezto.sh
+└── run_once_after_install-tmux-plugins.sh
+```
 
 ## クイックスタート
 
@@ -60,6 +87,16 @@ chezmoi re-add
 
 - `~/.zshrc.local` - シェル設定のオーバーライド
 - `~/.gitconfig.local` - Git 設定のオーバーライド（仕事用メールアドレス等）
+
+## セットアップスクリプト
+
+`chezmoi init --apply` 時に以下のスクリプトが自動実行される。
+
+| スクリプト | タイミング | 内容 |
+|---|---|---|
+| `run_onchange_before_install-homebrew.sh.tmpl` | Brewfile 変更時 | Homebrew インストール & `brew bundle` |
+| `run_once_before_install-prezto.sh` | 初回のみ | Prezto のクローン |
+| `run_once_after_install-tmux-plugins.sh` | 初回のみ | TPM & tmux プラグインのインストール |
 
 ## Brewfile 管理
 

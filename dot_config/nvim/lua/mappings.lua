@@ -15,6 +15,9 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 -- Neogit
 map("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Neogit" })
 
+-- Git branches
+map("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "Git branches" })
+
 -- Diffview
 map("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Open Diffview" })
 map("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", { desc = "File history" })

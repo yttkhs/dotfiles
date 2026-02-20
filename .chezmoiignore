@@ -3,6 +3,9 @@ LICENSE
 .git
 .gitignore
 .DS_Store
-.claude
+.claude/*
+!.claude/settings.json
+!.claude/hooks
+!.claude/rules
 .serena
 homebrew

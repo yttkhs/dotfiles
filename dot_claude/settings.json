@@ -4,6 +4,10 @@
       "mcp__pencil"
     ]
   },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_TEAMMATE_MODE": "tmux"
+  },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [],
   "statusLine": {
@@ -29,6 +33,18 @@
             "type": "command",
             "command": "~/.claude/hooks/notify.sh 'Finished'",
             "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/codex-review-plan.sh",
+            "timeout": 120
           }
         ]
       }

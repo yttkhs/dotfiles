@@ -12,7 +12,7 @@ background-opacity = 1
 background-blur = 10
 alpha-blending = linear
 
-macos-icon = "xray"
+macos-icon = "glass"
 macos-titlebar-style = transparent
 macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = true

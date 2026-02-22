@@ -2,6 +2,11 @@
 {{- if eq .chezmoi.arch "amd64" -}}
 {{-   $brewPrefix = "/usr/local" -}}
 {{- end -}}
+# tmux auto-attach
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux new-session -A -s main
+fi
+
 # PATH
 export PATH="/usr/local/bin:$PATH"
 

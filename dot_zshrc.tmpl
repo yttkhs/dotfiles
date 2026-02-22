@@ -38,6 +38,9 @@ export NODE_OPTIONS="--max-old-space-size=4096"
 # libpq
 export PATH="{{ $brewPrefix }}/opt/libpq/bin:$PATH"
 
+# Cargo
+export PATH="{{ .chezmoi.homeDir }}/.cargo/bin:$PATH"
+
 # pipx
 export PATH="$PATH:{{ .chezmoi.homeDir }}/.local/bin"
 

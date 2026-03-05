@@ -4,6 +4,9 @@ local M = {}
 M.base46 = {
   theme = "kanagawa-dragon",
   transparency = true,
+  hl_override = {
+    IblScopeChar = { fg = "grey_fg", bold = false },
+  },
 }
 
 M.ui = {

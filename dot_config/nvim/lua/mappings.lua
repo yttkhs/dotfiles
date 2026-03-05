@@ -9,6 +9,9 @@ del("i", "<C-l>")
 del("i", "<C-j>")
 del("i", "<C-k>")
 
+-- Remove NvChad terminal mapping (conflicts with gitsigns <leader>h* keys)
+del("n", "<leader>h")
+
 -- NvimTree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 

@@ -10,3 +10,4 @@ LICENSE
 !.claude/rules
 .serena
 homebrew
+.config/nvim/lazy-lock.json

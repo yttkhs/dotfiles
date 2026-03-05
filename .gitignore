@@ -29,6 +29,9 @@ homebrew/Brewfile.lock.json
 .zsh_history
 .zsh_sessions/
 
+# Neovim (managed by lazy.nvim)
+dot_config/nvim/lazy-lock.json
+
 # tmux plugins (managed by TPM)
 dot_config/tmux/plugins/
 

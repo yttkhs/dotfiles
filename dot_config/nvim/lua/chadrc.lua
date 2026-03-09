@@ -6,6 +6,7 @@ M.base46 = {
   transparency = true,
   hl_override = {
     IblScopeChar = { fg = "grey_fg", bold = false },
+    LspInlayHint = { bg = "NONE", fg = "grey" },
   },
 }
 

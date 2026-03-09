@@ -74,7 +74,6 @@ return {
     opts = {
       signcolumn = true,
       numhl = false,
-      linehl = true,
       current_line_blame = true,
       on_attach = function(bufnr)
         local gs = require("gitsigns")

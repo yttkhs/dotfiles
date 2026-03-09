@@ -1,7 +1,7 @@
 # Global settings
 shell = "zsh -c '{}'"
-default-scheme = "base16-mocha"
-preferred-schemes = ["base16-gruvbox-dark", "base16-gruvbox-light", "base16-github-dark"]
+default-scheme = "base24-tomorrow-night-dark"
+preferred-schemes = ["base24-tomorrow-night-dark", "base16-gruvbox-dark", "base16-gruvbox-light", "base16-github-dark"]
 
 # Item configurations
 [[items]]
@@ -25,7 +25,7 @@ supported-systems = ["base16", "base24"]
 path = "https://github.com/tinted-theming/tinted-tmux"
 name = "tinted-tmux"
 # Check if tmux is in use and if it is, reload the config file
-hook = "tmux run 2> /dev/null && tmux source-file %f"
+hook = "tmux run 2> /dev/null && grep -v border-style %f > /tmp/tinted-tmux.conf && tmux source-file /tmp/tinted-tmux.conf"
 themes-dir = "colors"
 
 # fzf

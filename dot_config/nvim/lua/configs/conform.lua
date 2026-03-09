@@ -1,18 +1,21 @@
 local conform = require("conform")
 
+local web_fmts = { "biome-check", "prettierd", "prettier", stop_after_first = true }
+local prettier_fmts = { "prettierd", "prettier", stop_after_first = true }
+
 conform.setup({
   formatters_by_ft = {
     lua = { "stylua" },
-    javascript = { "biome-check", "prettierd", "prettier", stop_after_first = true },
-    typescript = { "biome-check", "prettierd", "prettier", stop_after_first = true },
-    javascriptreact = { "biome-check", "prettierd", "prettier", stop_after_first = true },
-    typescriptreact = { "biome-check", "prettierd", "prettier", stop_after_first = true },
-    json = { "biome-check", "prettierd", "prettier", stop_after_first = true },
-    jsonc = { "biome-check", "prettierd", "prettier", stop_after_first = true },
-    css = { "prettierd", "prettier", stop_after_first = true },
-    html = { "prettierd", "prettier", stop_after_first = true },
-    yaml = { "prettierd", "prettier", stop_after_first = true },
-    markdown = { "prettierd", "prettier", stop_after_first = true },
+    javascript = web_fmts,
+    typescript = web_fmts,
+    javascriptreact = web_fmts,
+    typescriptreact = web_fmts,
+    json = web_fmts,
+    jsonc = web_fmts,
+    css = prettier_fmts,
+    html = prettier_fmts,
+    yaml = prettier_fmts,
+    markdown = prettier_fmts,
     sh = { "shfmt" },
     bash = { "shfmt" },
     zsh = { "shfmt" },

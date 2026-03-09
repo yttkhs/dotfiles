@@ -137,7 +137,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     opts = {
-      scope = { show_start = false },
+      scope = { show_start = false, show_end = false },
     },
   },
 

@@ -1,5 +1,16 @@
 require("nvchad.configs.lspconfig").defaults()
 
+-- Hide diagnostic sign column icons (keep gitsigns only) & use undercurl
+vim.diagnostic.config({ signs = false })
+
+for _, type in ipairs({ "Error", "Warn", "Info", "Hint" }) do
+  local hl = "DiagnosticUnderline" .. type
+  local existing = vim.api.nvim_get_hl(0, { name = hl })
+  existing.underline = false
+  existing.undercurl = true
+  vim.api.nvim_set_hl(0, hl, existing)
+end
+
 local servers = {
   -- Web frontend
   "html",

@@ -16,6 +16,24 @@ M.ui = {
   statusline = {
     theme = "vscode_colored",
   },
+  tabufline = {
+    modules = {
+      treeOffset = function()
+        for _, win in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+          if vim.bo[vim.api.nvim_win_get_buf(win)].ft == "NvimTree" then
+            local w = vim.api.nvim_win_get_width(win)
+            local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+            local icon = vim.fn.nr2char(0xf07b)
+            local title = " " .. icon .. " " .. dir_name .. " "
+            local padding = w - vim.fn.strwidth(title)
+            if padding < 0 then padding = 0 end
+            return "%#NvimTreeNormal#" .. title .. string.rep(" ", padding) .. "%#NvimTreeWinSeparator#│"
+          end
+        end
+        return ""
+      end,
+    },
+  },
   telescope = {
     style = "bordered",
   },

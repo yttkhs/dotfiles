@@ -15,9 +15,6 @@ del("n", "<leader>h")
 -- NvimTree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 
--- Neogit
-map("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Neogit" })
-
 -- Git branches
 map("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "Git branches" })
 

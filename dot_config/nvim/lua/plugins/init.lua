@@ -192,21 +192,24 @@ return {
     },
   },
 
-  -- Git client (Magit-style, integrates with diffview.nvim)
+  -- Terminal manager (Lazygit integration)
   {
-    "NeogitOrg/neogit",
-    cmd = "Neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    opts = {
-      integrations = {
-        diffview = true,
-        telescope = true,
-      },
-    },
+    "akinsho/toggleterm.nvim",
+    cmd = "ToggleTerm",
+    keys = { "<leader>gg" },
+    opts = {},
+    config = function(_, opts)
+      require("toggleterm").setup(opts)
+      local Terminal = require("toggleterm.terminal").Terminal
+      local lazygit = Terminal:new({
+        cmd = "lazygit",
+        direction = "tab",
+        hidden = true,
+      })
+      vim.keymap.set("n", "<leader>gg", function()
+        lazygit:toggle()
+      end, { desc = "Open Lazygit" })
+    end,
   },
 
   -- Diff viewer

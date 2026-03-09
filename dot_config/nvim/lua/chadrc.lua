@@ -2,7 +2,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "kanagawa-dragon",
+  theme = "tomorrow_night",
   transparency = true,
   hl_override = {
     IblScopeChar = { fg = "grey_fg", bold = false },

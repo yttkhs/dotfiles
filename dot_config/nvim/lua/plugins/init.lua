@@ -292,6 +292,26 @@ return {
     end,
   },
 
+  -- Code minimap
+  {
+    "Isrothy/neominimap.nvim",
+    version = "v3.x.x",
+    lazy = false,
+    keys = {
+      { "<leader>nm", "<cmd>Neominimap Toggle<cr>", desc = "Toggle global minimap" },
+      { "<leader>no", "<cmd>Neominimap Enable<cr>", desc = "Enable global minimap" },
+      { "<leader>nc", "<cmd>Neominimap Disable<cr>", desc = "Disable global minimap" },
+      { "<leader>nf", "<cmd>Neominimap ToggleFocus<cr>", desc = "Switch focus on minimap" },
+    },
+    init = function()
+      vim.opt.wrap = false
+      vim.opt.sidescrolloff = 36
+      vim.g.neominimap = {
+        auto_enable = true,
+      }
+    end,
+  },
+
   -- Session restore
   {
     "folke/persistence.nvim",

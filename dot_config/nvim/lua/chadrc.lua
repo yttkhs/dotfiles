@@ -5,6 +5,7 @@ M.base46 = {
   theme = "tomorrow_night",
   transparency = true,
   hl_override = {
+    CursorLine = { bg = "black2" },
     IblScopeChar = { fg = "grey_fg", bold = false },
     LspInlayHint = { bg = "NONE", fg = "grey" },
   },

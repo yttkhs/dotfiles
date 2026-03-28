@@ -11,4 +11,5 @@ node = "latest"
 "npm:@openai/codex" = "latest"
 python = "latest"
 uv = "latest"
+terraform = "latest"
 

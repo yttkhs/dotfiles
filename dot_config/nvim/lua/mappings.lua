@@ -32,28 +32,3 @@ map("n", "<leader>xd", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { des
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle<CR>", { desc = "LSP references (Trouble)" })
 map("n", "<leader>xq", "<cmd>Trouble qflist toggle<CR>", { desc = "Quickfix (Trouble)" })
 
--- Neovide-specific mappings
-if vim.g.neovide then
-  -- Cmd+S to save
-  map({ "n", "i", "v" }, "<D-s>", "<cmd>w<CR>", { desc = "Save file" })
-
-  -- Cmd+V to paste from system clipboard
-  map({ "n", "v" }, "<D-v>", '"+p', { desc = "Paste from clipboard" })
-  map("i", "<D-v>", "<C-r>+", { desc = "Paste from clipboard" })
-  map("c", "<D-v>", "<C-r>+", { desc = "Paste from clipboard" })
-
-  -- Cmd+=/- for zoom
-  vim.g.neovide_scale_factor = 1.0
-
-  map("n", "<D-=>", function()
-    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * 1.1
-  end, { desc = "Zoom in" })
-
-  map("n", "<D-->", function()
-    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor / 1.1
-  end, { desc = "Zoom out" })
-
-  map("n", "<D-0>", function()
-    vim.g.neovide_scale_factor = 1.0
-  end, { desc = "Reset zoom" })
-end

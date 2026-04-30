@@ -229,7 +229,7 @@ return {
   -- Auto close/rename HTML & JSX/TSX tags
   {
     "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
+    event = { "BufReadPre", "BufNewFile" },
     opts = {},
   },
 

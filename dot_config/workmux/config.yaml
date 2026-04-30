@@ -13,11 +13,14 @@ status_icons:
   done: "󰄬"
 
 panes:
-  - command: clear    # 左側：空のシェル（60%）
-  - command: <agent>  # 右側：Claude Code（40%）
+  - command: nvim     # left: nvim (40%)
+  - command: <agent>  # middle: Claude Code (30%, focused)
     split: horizontal
-    percentage: 40
+    percentage: 60
     focus: true
+  - command: clear    # right: empty shell (30%)
+    split: horizontal
+    percentage: 50
 
 auto_name:
   model: "gemini-2.5-flash-lite"

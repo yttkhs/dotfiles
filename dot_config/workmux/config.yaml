@@ -1,7 +1,7 @@
 merge_strategy: merge
 worktree_naming: basename
 nerdfont: true
-agent: claude
+agent: claude --permission-mode auto
 
 files:
   symlink:

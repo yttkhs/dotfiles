@@ -343,10 +343,10 @@
     "cloudflare@claude-plugins-official": true
   },
   "language": "Japanese",
-  "effortLevel": "max",
+  "editorMode": "normal",
   "teammateMode": "in-process",
   "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
 }

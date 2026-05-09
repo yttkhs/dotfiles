@@ -347,6 +347,49 @@ return {
     },
   },
 
+  -- AI sidekick (CLI integration with tmux-backed persistence)
+  {
+    "folke/sidekick.nvim",
+    event = "VeryLazy",
+    opts = {
+      nes = { enabled = false },
+      cli = {
+        mux = {
+          enabled = true,
+          backend = "tmux",
+        },
+      },
+    },
+    keys = {
+      { "<leader>aa", function() require("sidekick.cli").toggle() end, desc = "Sidekick toggle CLI" },
+      { "<leader>ac", function() require("sidekick.cli").toggle({ name = "claude", focus = true }) end, desc = "Sidekick toggle Claude" },
+      { "<leader>as", function() require("sidekick.cli").select() end, desc = "Sidekick select CLI" },
+      { "<leader>ad", function() require("sidekick.cli").close() end, desc = "Sidekick detach session" },
+      { "<leader>ap", function() require("sidekick.cli").prompt() end, mode = { "n", "x" }, desc = "Sidekick select prompt" },
+      { "<leader>at", function() require("sidekick.cli").send({ msg = "{this}" }) end, mode = { "n", "x" }, desc = "Sidekick send this" },
+      { "<leader>af", function() require("sidekick.cli").send({ msg = "{file}" }) end, desc = "Sidekick send file" },
+      { "<C-.>", function() require("sidekick.cli").focus() end, mode = { "n", "t", "i", "x" }, desc = "Sidekick focus" },
+    },
+  },
+
+  -- Seamless navigation between Neovim splits and tmux panes (Alt-hjkl)
+  {
+    "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+    keys = {
+      { "<M-h>", "<cmd>TmuxNavigateLeft<cr>", desc = "Navigate left (vim/tmux)" },
+      { "<M-j>", "<cmd>TmuxNavigateDown<cr>", desc = "Navigate down (vim/tmux)" },
+      { "<M-k>", "<cmd>TmuxNavigateUp<cr>", desc = "Navigate up (vim/tmux)" },
+      { "<M-l>", "<cmd>TmuxNavigateRight<cr>", desc = "Navigate right (vim/tmux)" },
+    },
+  },
+
   -- Test runner
   {
     "nvim-neotest/neotest",

@@ -16,7 +16,6 @@
 | starship | プロンプト |
 | mise | ランタイムバージョン管理 |
 | fzf | コマンドラインファジーファインダー (ghq 連携) |
-| tinty | ターミナルテーマ管理 (base16/base24) |
 | direnv | ディレクトリ別環境変数 |
 | workmux | ワークスペース管理 |
 | Claude Code | AI コーディングアシスタント |
@@ -31,7 +30,6 @@
 │   ├── nvim/             # Neovim (NvChad)
 │   ├── sheldon/          # zsh プラグイン管理
 │   ├── starship.toml     # プロンプト
-│   ├── tinted-theming/   # テーマ管理
 │   ├── tmux/             # tmux 設定
 │   └── workmux/          # ワークスペース管理
 ├── dot_claude/           # Claude Code 設定

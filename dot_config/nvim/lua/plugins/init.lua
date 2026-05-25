@@ -375,6 +375,11 @@ return {
   -- Seamless navigation between Neovim splits and tmux panes (Alt-hjkl)
   {
     "christoomey/vim-tmux-navigator",
+    init = function()
+      -- Disable default <C-h/j/k/l/\> mappings (incl. broken terminal-mode ones
+      -- that leak literal text to the shell in Neovim). We bind <M-hjkl> below.
+      vim.g.tmux_navigator_no_mappings = 1
+    end,
     cmd = {
       "TmuxNavigateLeft",
       "TmuxNavigateDown",

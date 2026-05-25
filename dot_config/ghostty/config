@@ -1,6 +1,8 @@
 shell-integration = zsh
 
-theme = "tinted-theming"
+# Theme is managed per-machine via `ghostty +list-themes` (press 'w' to write).
+# The auto/theme.ghostty file is not tracked by dotfiles.
+config-file = ?auto/theme.ghostty
 
 font-size = 12
 font-thicken

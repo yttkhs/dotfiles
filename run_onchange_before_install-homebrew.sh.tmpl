@@ -25,7 +25,7 @@ brew update
 BREWFILE="{{ .chezmoi.sourceDir }}/homebrew/Brewfile"
 if [[ -f "$BREWFILE" ]]; then
     echo "Installing packages from Brewfile..."
-    brew bundle install --file="$BREWFILE" --no-lock
+    brew bundle install --file="$BREWFILE"
     echo "All packages installed"
 else
     echo "Error: Brewfile not found at $BREWFILE"

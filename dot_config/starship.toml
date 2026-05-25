@@ -1,5 +1,5 @@
 # Minimal Starship Config
-# Colors use ANSI names to follow terminal palette (controlled by tinty)
+# Colors use ANSI names to follow Ghostty's terminal palette
 
 format = """
 $directory\

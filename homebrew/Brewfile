@@ -4,7 +4,6 @@
 # ====================
 # Taps (Additional repositories)
 # ====================
-tap "tinted-theming/tinted"
 tap "raine/workmux"
 
 # ====================
@@ -42,7 +41,6 @@ brew "fzf"                      # Command-line fuzzy finder written in Go
 brew "starship"                 # Cross-shell prompt for astronauts
 brew "sheldon"                  # Fast, configurable, shell plugin manager
 brew "terminal-notifier"        # Send macOS User Notifications from the command-line
-brew "tinted-theming/tinted/tinty"  # Change the theme of your terminal, text editor and anything else
 
 # ====================
 # System Utilities

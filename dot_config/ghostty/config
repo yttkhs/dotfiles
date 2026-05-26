@@ -8,8 +8,8 @@ font-family = "PlemolJP35 Console NF"
 font-feature = -dlig
 adjust-cell-height = 35%
 
-background-opacity = 1
-background-blur = 10
+background-opacity = 0.95
+background-blur = 5
 alpha-blending = linear
 
 macos-icon = "glass"

@@ -5,6 +5,7 @@
 # Taps (Additional repositories)
 # ====================
 tap "raine/workmux"
+tap "raine/claude-history"
 
 # ====================
 # Development Tools
@@ -40,7 +41,6 @@ brew "tmux"                     # Terminal multiplexer
 brew "fzf"                      # Command-line fuzzy finder written in Go
 brew "starship"                 # Cross-shell prompt for astronauts
 brew "sheldon"                  # Fast, configurable, shell plugin manager
-brew "terminal-notifier"        # Send macOS User Notifications from the command-line
 
 # ====================
 # System Utilities
@@ -48,6 +48,7 @@ brew "terminal-notifier"        # Send macOS User Notifications from the command
 brew "chezmoi"                  # Manage your dotfiles across multiple diverse machines
 brew "gnupg"                    # GNU Pretty Good Privacy (PGP) package
 brew "raine/workmux/workmux"    # Tmux workspace manager
+brew "raine/claude-history/claude-history"  # Claude Code session history (pairs with workmux --fork)
 
 # ====================
 # Programming Languages
@@ -62,6 +63,7 @@ cask "ghostty"                  # Terminal emulator that uses platform-native UI
 
 # Fonts
 cask "font-jetbrains-mono-nerd-font"  # JetBrains Mono Nerd Font
+cask "font-plemol-jp-nf"              # PlemolJP Nerd Font (CJK + Nerd Font glyphs, used by Ghostty)
 
 # Development tools
 cask "jetbrains-toolbox"        # JetBrains tools manager
@@ -78,6 +80,3 @@ cask "telegram"                 # Cloud-based instant messaging service
 
 # Design
 cask "figma"                    # Collaborative team software
-
-# Input methods
-cask "google-japanese-ime"      # Japanese input software

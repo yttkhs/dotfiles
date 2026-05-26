@@ -1,4 +1,5 @@
 merge_strategy: merge
+worktree_dir: ../worktrees
 worktree_naming: basename
 nerdfont: true
 agent: claude --permission-mode auto
@@ -13,14 +14,21 @@ status_icons:
   done: "󰄬"
 
 panes:
-  - command: nvim     # left: nvim (40%)
-  - command: <agent>  # middle: Claude Code (30%, focused)
+  - command: nvim
+  - command: <agent>
     split: horizontal
     percentage: 60
     focus: true
-  - command: clear    # right: empty shell (30%)
+  - command: clear
     split: horizontal
     percentage: 50
+
+dashboard:
+  preview_size: 70
+  merge: "/merge"
+
+sidebar:
+  layout: tiles
 
 auto_name:
   model: "gemini-2.5-flash-lite"

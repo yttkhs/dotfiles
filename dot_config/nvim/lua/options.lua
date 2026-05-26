@@ -2,7 +2,7 @@ require("nvchad.options")
 
 vim.opt.scrolloff = 4
 vim.opt.autowriteall = true
-vim.opt.cursorlineopt = "both"
+vim.opt.cursorlineopt = "number"
 
 -- Session: restore everything (tabs, splits, buffers, cursor position, etc.)
 vim.o.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

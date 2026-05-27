@@ -8,11 +8,15 @@ FILE=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
 
 ABS_FILE=$(cd -- "$(dirname -- "$FILE")" 2>/dev/null && pwd)/$(basename -- "$FILE")
 
+if pgrep -x Zed >/dev/null 2>&1; then
+  zed --existing "$ABS_FILE"
+  exit 0
+fi
+
 GIT_ROOT=$(cd -- "$(dirname -- "$ABS_FILE")" 2>/dev/null && git rev-parse --show-toplevel 2>/dev/null || true)
 
 if [ -n "${GIT_ROOT:-}" ]; then
-  open -g -b dev.zed.Zed "$GIT_ROOT"
-  sleep 0.15
+  zed "$GIT_ROOT" "$ABS_FILE"
+else
+  zed "$ABS_FILE"
 fi
-
-open -g -b dev.zed.Zed "$ABS_FILE"

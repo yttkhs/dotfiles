@@ -37,6 +37,7 @@
 
   "project_panel": {
     "dock": "left",
+    "starts_open": false,
     "auto_reveal_entries": true,
     "git_status_indicator": true
   },
@@ -45,7 +46,7 @@
     "auto_reveal_entries": true
   },
   "collaboration_panel": { "dock": "left" },
-  "git_panel": { "dock": "left" },
+  "git_panel": { "dock": "left", "starts_open": true },
 
   "tabs": {
     "git_status": true,

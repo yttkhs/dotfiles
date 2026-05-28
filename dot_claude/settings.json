@@ -287,18 +287,11 @@
             "timeout": 120
           }
         ]
-      },
-      {
-        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/zed-reveal.sh",
-            "timeout": 5
-          }
-        ]
       }
     ]
+  },
+  "worktree": {
+    "baseRef": "fresh"
   },
   "statusLine": {
     "type": "command",

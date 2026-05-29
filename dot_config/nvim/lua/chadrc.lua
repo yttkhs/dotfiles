@@ -2,7 +2,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "tomorrow_night",
+  theme = "onedark",
   transparency = true,
   hl_override = {
     CursorLine = { bg = "black2" },

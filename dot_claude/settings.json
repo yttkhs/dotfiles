@@ -84,7 +84,6 @@
       "Bash(export PATH=\"$HOME/.cargo/bin:$HOME/.local/share/mise/installs/node/24.10.0/bin:$PATH\" && cargo fmt --manifest-path /Users/yuta/Workspace/Repository/github.com/frizeno/nerve/src-tauri/Cargo.toml -- --check 2>&1 && cargo clippy --manifest-path /Users/yuta/Workspace/Repository/github.com/frizeno/nerve/src-tauri/Cargo.toml -- -D warnings 2>&1)",
       "Bash(export PATH=\"$HOME/.cargo/bin:$HOME/.local/share/mise/installs/node/24.10.0/bin:$PATH\" && cargo fmt --manifest-path /Users/yuta/Workspace/Repository/github.com/frizeno/nerve/src-tauri/Cargo.toml 2>&1)",
       "Bash(export PATH=\"$HOME/.local/share/mise/installs/node/24.10.0/bin:$PATH\" && pnpm biome check --write /Users/yuta/Workspace/Repository/github.com/frizeno/nerve/src 2>&1)",
-      "Skill(codex-review)",
       "Edit",
       "Write",
       "Read",
@@ -276,20 +275,6 @@
   },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [],
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "ExitPlanMode",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/codex-review-plan.sh",
-            "timeout": 120
-          }
-        ]
-      }
-    ]
-  },
   "worktree": {
     "baseRef": "fresh"
   },
@@ -322,9 +307,19 @@
     "clangd-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "cloudflare@claude-plugins-official": true
+    "cloudflare@claude-plugins-official": true,
+    "codex@openai-codex": true
+  },
+  "extraKnownMarketplaces": {
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
   },
   "language": "Japanese",
+  "effortLevel": "high",
   "editorMode": "normal",
   "teammateMode": "in-process",
   "remoteControlAtStartup": true,

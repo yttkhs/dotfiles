@@ -9,7 +9,7 @@ gemini-cli = "latest"
 node = "latest"
 "npm:yarn" = "latest"
 "npm:@openai/codex" = "latest"
-python = "latest"
+python = "3.13"
 uv = "latest"
 terraform = "latest"
 

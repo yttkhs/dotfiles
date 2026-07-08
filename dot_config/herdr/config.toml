@@ -1,0 +1,8 @@
+[theme]
+name = "terminal"
+
+[keys]
+prefix = "ctrl+a"
+
+[ui]
+agent_panel_sort = "priority"

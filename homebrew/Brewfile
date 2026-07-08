@@ -38,6 +38,7 @@ brew "docker-compose"           # Isolated development environments using Docker
 # Terminal & Shell Tools
 # ====================
 brew "tmux"                     # Terminal multiplexer
+brew "herdr"                    # Agent multiplexer that lives in your terminal
 brew "fzf"                      # Command-line fuzzy finder written in Go
 brew "starship"                 # Cross-shell prompt for astronauts
 brew "sheldon"                  # Fast, configurable, shell plugin manager
